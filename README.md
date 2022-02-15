@@ -16,6 +16,7 @@
 * Programming Language: Kotlin
 * Bitbucket
 * Git
+* Jira
 
 ### Features ###
 

@@ -80,4 +80,11 @@ class Conversion_Code {
         return hex
     }
     
+    fun decToBin(num1: String): String {
+
+        var decimal = num1.toInt()
+        var binary = Integer.toBinaryString(decimal)
+
+        return binary.toString()
+    }
 }

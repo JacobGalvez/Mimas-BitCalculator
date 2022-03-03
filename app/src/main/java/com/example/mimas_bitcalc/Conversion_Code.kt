@@ -87,4 +87,66 @@ class Conversion_Code {
 
         return binary.toString()
     }
+
+    fun decToHex(num1: String): String {
+        var decimal = num1.toInt()
+        var hex = ""
+
+        while(decimal > 0){
+            var rem = decimal % 16
+
+            if(rem == 0){
+                hex += "0"
+            }
+            else if(rem == 1){
+                hex += "1"
+            }
+            else if(rem == 2){
+                hex += "2"
+            }
+            else if(rem == 3){
+                hex += "3"
+            }
+            else if(rem == 4){
+                hex += "4"
+            }
+            else if(rem == 5){
+                hex += "5"
+            }
+            else if(rem == 6){
+                hex += "6"
+            }
+            else if(rem == 7){
+                hex += "7"
+            }
+            else if(rem == 8){
+                hex += "8"
+            }
+            else if(rem == 9){
+                hex += "9"
+            }
+            else if(rem == 10){
+                hex += "A"
+            }
+            else if(rem == 11){
+                hex += "B"
+            }
+            else if(rem == 12){
+                hex += "C"
+            }
+            else if(rem == 13){
+                hex += "D"
+            }
+            else if(rem == 14){
+                hex += "E"
+            }
+            else if(rem == 15){
+                hex += "F"
+            }
+
+            decimal /= 16
+        }
+        hex.reversed()
+        return hex
+    }
 }

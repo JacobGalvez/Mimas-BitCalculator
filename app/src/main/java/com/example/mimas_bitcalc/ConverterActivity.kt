@@ -7,6 +7,8 @@ import android.view.View
 import android.widget.*
 
 class ConverterActivity : AppCompatActivity() {
+    internal val con = Conversion_Code()
+
     private lateinit var input: Spinner
     private lateinit var conversionDesired: Spinner
     private lateinit var answer: TextView
@@ -72,39 +74,39 @@ class ConverterActivity : AppCompatActivity() {
 
         //hex to hex case
         if(inputBaseChoice == 0 && convertBaseDesiredChoice == 0){
-            finalSolution = "the input"
+            finalSolution = insertText
         }
         //hex to binary case
         else if(inputBaseChoice == 0 && convertBaseDesiredChoice == 1){
-            //finalSolution = function to do this
+            finalSolution = con.hexadecimalToBinary(insertText)
         }
         //hex to decimal case
         else if(inputBaseChoice == 0 && convertBaseDesiredChoice == 2){
-            //finalSolution = function to do this
+            finalSolution = con.hexadecimalToDecimal(insertText)
         }
         //binary to hex case
         else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 0){
-            //finalSolution = function to do this
+            finalSolution = con.binToHex(insertText)
         }
         //binary to binary case
         else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 1){
-            finalSolution = "the input"
+            finalSolution = insertText
         }
         //binary to decimal case
         else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 2){
-            //finalSolution = function to do this
+            finalSolution = con.binToDec(insertText)
         }
         //decimal to hex case
         else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 0){
-            //finalSolution = function to do this
+            finalSolution = con.decToHex(insertText)
         }
         //decimal to binary case
         else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 1){
-            //finalSolution = function to do this
+            finalSolution = con.decToBin(insertText)
         }
         //decimal to decimal case
         else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 2){
-            finalSolution = "the input"
+            finalSolution = insertText
         }
         else{
             finalSolution = "system error"

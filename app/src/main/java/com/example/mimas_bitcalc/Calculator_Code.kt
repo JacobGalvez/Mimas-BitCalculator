@@ -2,21 +2,23 @@ package com.example.mimas_bitcalc
 
 class Calculator_Code {
 
+    private val converter = Conversion_Code()
+
     fun addition(num1: String, num2: String, base1: Int, base2: Int): String {
   
         val firstNumber = when(base1) { // switch statement for base1
             
-            2 -> binToDec(num1)
-            10 -> num1
-            16 -> hexToDecimal(num1)
+            1 -> converter.binToDec(num1)
+            2 -> num1
+            0 -> converter.hexadecimalToDecimal(num1)
             else -> "ERROR"
         }
     
         val secondNumber = when(base2) { // switch statement for base2
     
-            2 -> binToDec(num2)
-            10 -> num2
-            16 -> hexToDecimal(num2)
+            1 -> converter.binToDec(num2)
+            2 -> num2
+            0 -> converter.hexadecimalToDecimal(num2)
             else -> "ERROR"
         }
 
@@ -32,17 +34,17 @@ class Calculator_Code {
     
         val firstNumber = when(base1) {
             
-            2 -> binToDec(num1)
-            10 -> num1
-            16 -> hexToDecimal(num1)
+            1 -> converter.binToDec(num1)
+            2 -> num1
+            0 -> converter.hexadecimalToDecimal(num1)
             else -> "ERROR"
         }
             
         val secondNumber = when(base2) {
             
-            2 -> binToDec(num2)
-            10 -> num2
-            16 -> hexToDecimal(num2)
+            1 -> converter.binToDec(num2)
+            2 -> num2
+            0 -> converter.hexadecimalToDecimal(num2)
             else -> "ERROR"
         }
 
@@ -58,17 +60,17 @@ fun multiplication(num1: String, num2: String, base1: Int, base2: Int): String {
   
     val firstNumber = when(base1) {
     
-        2 -> binToDec(num1)
-        10 -> num1
-        16 -> hexToDecimal(num1)
+        1 -> converter.binToDec(num1)
+        2 -> num1
+        0 -> converter.hexadecimalToDecimal(num1)
         else -> "ERROR"
     }
     
     val secondNumber = when(base2) {
     
-        2 -> binToDec(num2)
-        10 -> num2
-        16 -> hexToDecimal(num2)
+        1 -> converter.binToDec(num2)
+        2 -> num2
+        0 -> converter.hexadecimalToDecimal(num2)
         else -> "ERROR"
     }
 
@@ -84,17 +86,17 @@ fun division(num1: String, num2: String, base1: Int, base2: Int): String {
   
     val firstNumber = when(base1) {
     
-        2 -> binToDec(num1)
-        10 -> num1
-        16 -> hexToDecimal(num1)
+        1 -> converter.binToDec(num1)
+        2 -> num1
+        0 -> converter.hexadecimalToDecimal(num1)
         else -> "ERROR"
     }
     
     val secondNumber = when(base2) {
     
-        2 -> binToDec(num2)
-        10 -> num2
-        16 -> hexToDecimal(num2)
+        1 -> converter.binToDec(num2)
+        2 -> num2
+        0 -> converter.hexadecimalToDecimal(num2)
         else -> "ERROR"
     }
 

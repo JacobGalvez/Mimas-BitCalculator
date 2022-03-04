@@ -2,22 +2,22 @@ package com.example.mimas_bitcalc
 
 class Conversion_Code {
 
-    public void hexadecimalToBinary(String userHexadecimalInput) {
-        //String userHexadecimalInput = "0A"; //  later add user input, will be an argument in the function
+    fun hexadecimalToBinary(num1: String): String {
 
-        int hexadecimalToDecimal = Integer.parseInt(userHexadecimalInput, 16);
+        var convertedNumber = Integer.parseInt(num1, 16)
 
-        String userInputConversion = (Integer.toBinaryString(hexadecimalToDecimal));
+        var userBinary = (Integer.toBinaryString(convertedNumber))
 
-        System.out.println("Conversion (Should be 10) : " + userInputConversion);
+        return userBinary
     }
 
-    public void hexadecimalToDecimal(String userHexNumber) {
-        //String userHexNumber = "0A";
+    fun hexadecimalToDecimal(num1: String): String {
 
-        int userNumberConversion = Integer.parseInt(userHexNumber, 16);
+        var convertedNumber = Integer.parseInt(num1, 16)
 
-        System.out.println("Hex: " + userHexNumber + " Converted to Decimal: " + userNumberConversion);
+        var userDecimal = convertedNumber.toString()
+        
+        return userDecimal
     }
 
 

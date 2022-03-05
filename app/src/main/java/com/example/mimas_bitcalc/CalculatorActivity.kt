@@ -90,6 +90,8 @@ class CalculatorActivity : AppCompatActivity() {
     }
 
     fun submit(view: View){
+        insertText1 = inputText1.text.toString()
+        insertText2 = inputText2.text.toString()
         calculateNow()
         println(insertText1)
         println(insertText2)
@@ -107,19 +109,19 @@ class CalculatorActivity : AppCompatActivity() {
 
         //addition
         if(operationDesiredChoice == 0){
-            finalSolution = cal.addition(insertText1, insertText1, input1BaseChoice, input2BaseChoice)
+            finalSolution = cal.addition(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
         }
         //subtraction
         else if(operationDesiredChoice == 1){
-            //finalSolution = cal.subtraction(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
+            finalSolution = cal.subtraction(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
         }
         //multiplication
         else if(operationDesiredChoice == 2){
-            //finalSolution = cal.multiplication(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
+            finalSolution = cal.multiplication(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
         }
         //division
         else if(operationDesiredChoice == 3){
-            //finalSolution = cal.division(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
+            finalSolution = cal.division(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
         }
         else{
             finalSolution = "system error"

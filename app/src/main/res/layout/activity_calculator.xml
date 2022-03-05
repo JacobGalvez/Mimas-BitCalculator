@@ -64,7 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText2_cal" />
 
     <Spinner
-        android:id="@+id/spinner2_cal"
+        android:id="@+id/spinner1_cal"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:contentDescription="@string/spinner_no_text"
@@ -104,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText2_cal" />
 
     <Spinner
-        android:id="@+id/spinner1_cal"
+        android:id="@+id/spinner2_cal"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:contentDescription="@string/spinner_no_text"

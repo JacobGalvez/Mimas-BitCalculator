@@ -37,4 +37,4 @@
 ### Matthew Whieldon
 * Created conversion functions for Binary to Decimal, Binary to Hexadecimal, Decimal to Binary, and Decimal to Hexadecimal.
 * URL: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/java/com/example/mimas_bitcalc/Conversion_Code.kt
-* Next Steps:
+* Next Steps: Create functions to allow conversion to and from Octal.

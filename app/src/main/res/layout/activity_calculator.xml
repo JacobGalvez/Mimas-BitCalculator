@@ -2,8 +2,130 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/submit_btn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CalculatorActivity">
+
+    <TextView
+        android:id="@+id/calculator_title"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/purple_500"
+        android:gravity="center"
+        android:text="Bit Calculator"
+        android:textColor="#7CB342"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText1_cal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText1_cal"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="type here for input 1"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_operation"
+        app:layout_constraintEnd_toStartOf="@+id/spinner2_cal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculator_title" />
+
+    <Spinner
+        android:id="@+id/spinner_operation"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/spinner_no_text"
+        android:minHeight="48dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText2_cal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText1_cal"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/Answer_spot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Solution:"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/solution"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2_cal" />
+
+    <Spinner
+        android:id="@+id/spinner1_cal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/spinner_no_text"
+        android:minHeight="48dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_operation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText1_cal"
+        app:layout_constraintTop_toBottomOf="@+id/calculator_title"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <EditText
+        android:id="@+id/editText2_cal"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="type here for input 2"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/Answer_spot"
+        app:layout_constraintEnd_toStartOf="@+id/spinner1_cal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_operation" />
+
+    <TextView
+        android:id="@+id/solution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..........."
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Answer_spot"
+        app:layout_constraintTop_toBottomOf="@+id/editText2_cal" />
+
+    <Spinner
+        android:id="@+id/spinner2_cal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/spinner_no_text"
+        android:minHeight="48dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/solution"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText2_cal"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_operation"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="submit"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Answer_spot" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

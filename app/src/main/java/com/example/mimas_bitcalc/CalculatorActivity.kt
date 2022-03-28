@@ -7,6 +7,8 @@ import android.view.View
 import android.widget.*
 
 class CalculatorActivity : AppCompatActivity() {
+    private val cal = Calculator_Code()
+
     private lateinit var input1: Spinner
     private lateinit var input2: Spinner
     private lateinit var operationDesired: Spinner
@@ -17,7 +19,7 @@ class CalculatorActivity : AppCompatActivity() {
     private var input1BaseChoice = 0
     private var input2BaseChoice = 0
     private var operationDesiredChoice = 0
-    private var finalSolution = "  "
+    var finalSolution = "  "
     var insertText1 = "0"
     var insertText2 = "0"
 
@@ -49,8 +51,8 @@ class CalculatorActivity : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 insertText1 = inputText1.text.toString()
                 input1BaseChoice = position
-                calculateNow()
-                calculateAnswer.text = finalSolution
+                //calculateNow()
+                //calculateAnswer.text = finalSolution
             }
         }
 
@@ -64,23 +66,8 @@ class CalculatorActivity : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 insertText2 = inputText2.text.toString()
                 input2BaseChoice = position
-                calculateNow()
-                calculateAnswer.text = finalSolution
-            }
-        }
-
-        input2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-            @SuppressLint("SetTextI18n")
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                calculateAnswer.text = "Input or Conversion Desired Needed"
-            }
-
-            @SuppressLint("SetTextI18n")
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                insertText2 = inputText2.text.toString()
-                input2BaseChoice = position
-                calculateNow()
-                calculateAnswer.text = finalSolution
+                //calculateNow()
+                //calculateAnswer.text = finalSolution
             }
         }
 
@@ -92,10 +79,9 @@ class CalculatorActivity : AppCompatActivity() {
 
             @SuppressLint("SetTextI18n")
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                //insertText2 = inputText2.text.toString()
                 operationDesiredChoice = position
-                calculateNow()
-                calculateAnswer.text = finalSolution
+                //calculateNow()
+                //calculateAnswer.text = finalSolution
             }
         }
 
@@ -103,7 +89,18 @@ class CalculatorActivity : AppCompatActivity() {
         calculateAnswer.text = "final_solution"
     }
 
-    fun calculateNow(){
+    fun submit(view: View){
+        insertText1 = inputText1.text.toString()
+        insertText2 = inputText2.text.toString()
+        calculateNow()
+        println(insertText1)
+        println(insertText2)
+        println(input1BaseChoice)
+        println(input2BaseChoice)
+        calculateAnswer.text = finalSolution
+    }
+
+    private fun calculateNow(){
         //variables for desired parameters
         //input text 1 (string): insertText1
         //input text 2 (string): insertText2
@@ -112,19 +109,19 @@ class CalculatorActivity : AppCompatActivity() {
 
         //addition
         if(operationDesiredChoice == 0){
-            //finalSolution = function to do this
+            finalSolution = cal.addition(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
         }
         //subtraction
         else if(operationDesiredChoice == 1){
-            //finalSolution = function to do this
+            finalSolution = cal.subtraction(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
         }
         //multiplication
         else if(operationDesiredChoice == 2){
-            //finalSolution = function to do this
+            finalSolution = cal.multiplication(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
         }
         //division
         else if(operationDesiredChoice == 3){
-            //finalSolution = function to do this
+            finalSolution = cal.division(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
         }
         else{
             finalSolution = "system error"

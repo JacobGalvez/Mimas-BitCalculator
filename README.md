@@ -27,3 +27,26 @@
 * Subtraction: perform subtraction for all 3 bit versions. (User Story: Seth Carranza)
 * Division: perform division for all 3 bit versions. (User Story: Seth Carranza)
 * Multiplication: perform multiplication for all 3 bit versions. (User Story: Seth Carranza)
+
+## Sprint 1 ##
+### Jacob Galvez
+* Created Hexadecimal -> Binary function, and created Hexadecimal -> Decimal function.
+* Also created mathematical operation functions (+, -, *, /) so that a user can operate on different number bases.
+* BIT-13, BIT-14 (conversion functions) - https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/4aff2b832ee51487a7d1075a9864d2616a273cc0
+* BIT-27, BIT-28, BIT-29 (math operation functions) - https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/fc85dcde744f3a18a1997c7eea1178c4cac3901d
+* Next Steps: Adding in more base conversions, implementing a good design pattern, and working on history backend data.
+### Matthew Whieldon
+* Created conversion functions for Binary to Decimal, Binary to Hexadecimal, Decimal to Binary, and Decimal to Hexadecimal.
+* URL: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/java/com/example/mimas_bitcalc/Conversion_Code.kt
+* Next Steps: Create functions to allow conversion to and from Octal.
+### Nicolas Canals
+* Created the Main Page for the Application (BIT-10)
+* URL for the kotlin code for the main page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/java/com/example/mimas_bitcalc/MainActivity.kt
+* URL for the XML layout code for the main page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/res/layout/activity_main.xml
+* Created the Converter Page for the Application (BIT-11)
+* URL for the kotlin code for the converter page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/java/com/example/mimas_bitcalc/ConverterActivity.kt
+* URL for the XML layout code for the converter page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/res/layout/activity_converter.xml
+* Created the Calculator Page for the Application (BIT-12)
+* URL for the kotlin code for the calculator page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/java/com/example/mimas_bitcalc/CalculatorActivity.kt
+* URL for the XML layout code for the calculator page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/res/layout/activity_calculator.xml
+* Next Steps: Fix Layout for all 3 pages (main, converter, calculator) to have more user friendly layouts, Create History Page, Clean out "debt" from all code made, add in 1 test 

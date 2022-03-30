@@ -1,4 +1,3 @@
 <resources>
     <string name="app_name">Mimas_BitCalc</string>
-    <string name="spinner_no_text">Choose a Base</string>
 </resources>

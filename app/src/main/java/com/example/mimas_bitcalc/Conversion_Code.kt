@@ -21,39 +21,4 @@ class Conversion_Code {
     }
 
 
-
-    fun binToDec(num1: String): String {
-
-        var convertedNumber = Integer.parseInt(num1, 2)
-
-        var userDecimal = convertedNumber.toString()
-
-        return userDecimal
-    }
-
-    fun binToHex(num1: String): String {
-
-        var convertedNumber = Integer.parseInt(num1, 2)
-
-        var userHex = convertedNumber.toString()
-
-        return userHex
-    }
-    
-    fun decToBin(num1: String): String {
-
-        var decimal = num1.toInt()
-        var binary = Integer.toBinaryString(decimal)
-
-        return binary.toString()
-    }
-
-    fun decToHex(num1: String): String {
-
-        var convertedNumber = Integer.parseInt(num1, 10)
-
-        var  userHex = convertedNumber.toString()
-
-        return userHex
-    }
 }

@@ -166,7 +166,7 @@ class Conversion_Code {
 
             decimal /= 16
         }
-        hex.reversed()
+        hex = hex.reversed()
         return hex
     }
 }

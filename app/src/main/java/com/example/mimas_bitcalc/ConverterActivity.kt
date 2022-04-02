@@ -44,7 +44,12 @@ class ConverterActivity : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 insertText = inputText.text.toString()
                 inputBaseChoice = position
-                answer.text = finalSolution
+                if (insertText == "")
+                    finalSolution = "0"
+                else {
+                    convertNow()
+                    answer.text = finalSolution
+                }
             }
         }
 
@@ -58,56 +63,61 @@ class ConverterActivity : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 insertText = inputText.text.toString()
                 convertBaseDesiredChoice = position
-                answer.text = finalSolution
+                if (insertText == "")
+                    finalSolution = "0"
+                else {
+                    convertNow()
+                    answer.text = finalSolution
+                }
             }
         }
 
         @SuppressLint("SetTextI18n")
-        answer.text = "final_solution"
+        answer.text = "final solution"
     }
 
-    fun submit(view: View) {
+    fun convertNow() {
         //variables for desired parameters
         //input text (string): insertText
 
         //hex to hex case
         if(inputBaseChoice == 0 && convertBaseDesiredChoice == 0){
-            answer.text = insertText
+            finalSolution = insertText
         }
         //hex to binary case
         else if(inputBaseChoice == 0 && convertBaseDesiredChoice == 1){
-            answer.text = con.hexadecimalToBinary(insertText)
+            finalSolution = con.hexadecimalToBinary(insertText)
         }
         //hex to decimal case
         else if(inputBaseChoice == 0 && convertBaseDesiredChoice == 2){
-            answer.text = con.hexadecimalToDecimal(insertText)
+            finalSolution = con.hexadecimalToDecimal(insertText)
         }
         //binary to hex case
         else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 0){
-            answer.text = con.binToHex(insertText)
+            finalSolution = con.binToHex(insertText)
         }
         //binary to binary case
         else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 1){
-            answer.text = insertText
+            finalSolution = insertText
         }
         //binary to decimal case
         else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 2){
-            answer.text = con.binToDec(insertText)
+            finalSolution = con.binToDec(insertText)
         }
         //decimal to hex case
         else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 0){
-            answer.text = con.decToHex(insertText)
+            finalSolution = con.decToHex(insertText)
         }
         //decimal to binary case
         else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 1){
-            answer.text = con.decToBin(insertText)
+            finalSolution = con.decToBin(insertText)
         }
         //decimal to decimal case
         else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 2){
-            answer.text = insertText
+            finalSolution = insertText
         }
         else{
-            answer.text = "system error"
+            finalSolution = "system error"
         }
 
     }

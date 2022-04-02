@@ -35,7 +35,7 @@ class Conversion_Code {
 
         var convertedNumber = Integer.parseInt(num1, 2)
 
-        var userHex = convertedNumber.toString()
+        var userHex = convertedNumber.toString(16)
 
         return userHex
     }
@@ -52,7 +52,7 @@ class Conversion_Code {
 
         var convertedNumber = Integer.parseInt(num1, 10)
 
-        var  userHex = convertedNumber.toString()
+        var  userHex = convertedNumber.toString(16)
 
         return userHex
     }

@@ -44,8 +44,12 @@ class ConverterActivity : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 insertText = inputText.text.toString()
                 inputBaseChoice = position
-                convertNow()
-                answer.text = finalSolution
+                if (insertText == "")
+                    finalSolution = "0"
+                else {
+                    convertNow()
+                    answer.text = finalSolution
+                }
             }
         }
 
@@ -59,13 +63,17 @@ class ConverterActivity : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 insertText = inputText.text.toString()
                 convertBaseDesiredChoice = position
-                convertNow()
-                answer.text = finalSolution
+                if (insertText == "")
+                    finalSolution = "0"
+                else {
+                    convertNow()
+                    answer.text = finalSolution
+                }
             }
         }
 
         @SuppressLint("SetTextI18n")
-        answer.text = "final_solution"
+        answer.text = "final solution"
     }
 
     fun convertNow() {

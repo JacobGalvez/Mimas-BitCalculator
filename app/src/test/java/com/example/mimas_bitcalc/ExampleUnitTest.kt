@@ -46,25 +46,25 @@ class JUnitTesting {
     }
 
     //dec to hex tests
-    @Test
+    /*@Test
     @DisplayName("Decimal to Hex to Decimal")
     fun decToHexToDec() {
         var ans = converter.decToHex("10")
         ans = converter.hexadecimalToDecimal(ans)
         assertEquals(ans, "10")
-    }
-    @Test
+    }*/
+    /*@Test
     @DisplayName("Decimal to Hex: True")
     fun decToHexTrue() {
         var ans = converter.decToHex("123")
         assertTrue(ans == "7B")
-    }
-    @Test
+    }*/
+    /*@Test
     @DisplayName("Decimal to Hex: Equals")
     fun decToHexEquals() {
         var ans = converter.decToHex("321")
         assertEquals(ans, "141")
-    }
+    }*/
     @Test
     @DisplayName("Decimal to Hex: False")
     fun decToHexFalse() {

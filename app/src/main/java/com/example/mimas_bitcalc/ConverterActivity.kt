@@ -83,38 +83,47 @@ class ConverterActivity : AppCompatActivity() {
         //hex to hex case
         if(inputBaseChoice == 0 && convertBaseDesiredChoice == 0){
             finalSolution = insertText
+            con.conversionHistory(insertText)
         }
         //hex to binary case
         else if(inputBaseChoice == 0 && convertBaseDesiredChoice == 1){
             finalSolution = con.hexadecimalToBinary(insertText)
+            con.conversionHistory(insertText)
         }
         //hex to decimal case
         else if(inputBaseChoice == 0 && convertBaseDesiredChoice == 2){
             finalSolution = con.hexadecimalToDecimal(insertText)
+            con.conversionHistory(insertText)
         }
         //binary to hex case
         else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 0){
             finalSolution = con.binToHex(insertText)
+            con.conversionHistory(insertText)
         }
         //binary to binary case
         else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 1){
             finalSolution = insertText
+            con.conversionHistory(insertText)
         }
         //binary to decimal case
         else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 2){
             finalSolution = con.binToDec(insertText)
+            con.conversionHistory(insertText)
         }
         //decimal to hex case
         else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 0){
             finalSolution = con.decToHex(insertText)
+            con.conversionHistory(insertText)
         }
         //decimal to binary case
         else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 1){
             finalSolution = con.decToBin(insertText)
+            con.conversionHistory(insertText)
         }
         //decimal to decimal case
         else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 2){
             finalSolution = insertText
+            con.conversionHistory(insertText)
         }
         else{
             finalSolution = "system error"

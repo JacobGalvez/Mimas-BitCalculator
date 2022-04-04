@@ -110,7 +110,6 @@ class CalculatorActivity : AppCompatActivity() {
         //addition
         if(operationDesiredChoice == 0){
             finalSolution = cal.addition(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
-            input1BaseChoice, input2BaseChoice)
             cal.calculatorHistory(insertText1, input1BaseChoice, input2BaseChoice, insertText2, " + ", finalSolution)
         }
         //subtraction
@@ -121,13 +120,11 @@ class CalculatorActivity : AppCompatActivity() {
         //multiplication
         else if(operationDesiredChoice == 2){
             finalSolution = cal.multiplication(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
-            input1BaseChoice, input2BaseChoice)
             cal.calculatorHistory(insertText1, input1BaseChoice, input2BaseChoice, insertText2, " * ", finalSolution)
         }
         //division
         else if(operationDesiredChoice == 3){
             finalSolution = cal.division(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
-            input1BaseChoice, input2BaseChoice)
             cal.calculatorHistory(insertText1, input1BaseChoice, input2BaseChoice, insertText2, " / ", finalSolution)
         }
         else{

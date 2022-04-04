@@ -35,7 +35,7 @@ class Conversion_Code {
 
         var convertedNumber = Integer.parseInt(num1, 2)
 
-        var userDecimal = convertedNumber.toString(16)
+        var userDecimal = convertedNumber.toString(10)
 
         answer = userDecimal
         baseTypeChange = " (binary) Converted to (decimal): "
@@ -47,7 +47,7 @@ class Conversion_Code {
 
         var convertedNumber = Integer.parseInt(num1, 2)
 
-        var userHex = convertedNumber.toString()
+        var userHex = convertedNumber.toString(16)
 
         answer = userHex
         baseTypeChange = " (binary) Converted to (hexadecimal): "

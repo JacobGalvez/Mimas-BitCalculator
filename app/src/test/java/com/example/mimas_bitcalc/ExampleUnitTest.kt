@@ -76,14 +76,14 @@ class JUnitTesting {
     @Test
     @DisplayName("Hex to Binary to Hex")
     fun hexToBinToHex() {
-        var ans = converter.hexadecimalToBinary("F")
+        var ans = converter.hexadecimalToBinary("f")
         ans = converter.binToHex(ans)
         assertEquals(ans, "f")
     }
     @Test
     @DisplayName("Hex to Binary: True")
     fun hexToBinTrue() {
-        var ans = converter.hexadecimalToBinary("FF")
+        var ans = converter.hexadecimalToBinary("ff")
         assertTrue(ans == "11111111")
     }
     @Test
@@ -125,5 +125,86 @@ class JUnitTesting {
         var ans = converter.decToHex("22")
         assertFalse(ans == "141")
     }
+
+    //bin to hex tests
+    @Test
+    @DisplayName("Binary to Hex to Binary")
+    fun binToHexToBin() {
+        var ans = converter.binToHex("1110")
+        ans = converter.hexadecimalToBinary(ans)
+        assertEquals(ans, "1110")
+    }
+    @Test
+    @DisplayName("Binary to Hex: True")
+    fun binToHexTrue() {
+        var ans = converter.binToHex("1010")
+        assertTrue(ans == "a")
+    }
+    @Test
+    @DisplayName("Binary to Hex: Equals")
+    fun binToHexEquals() {
+        var ans = converter.binToHex("1111")
+        assertEquals(ans, "f")
+    }
+    @Test
+    @DisplayName("Binary to Hex: False")
+    fun binToHexFalse() {
+        var ans = converter.binToHex("0001")
+        assertFalse(ans == "b")
+    }
+
+    //bin to dec tests
+    @Test
+    @DisplayName("Binary to Decimal to Binary")
+    fun binToDecToBin() {
+        var ans = converter.binToDec("1010")
+        ans = converter.decToBin(ans)
+        assertEquals(ans, "1010")
+    }
+    @Test
+    @DisplayName("Binary to Decimal: True")
+    fun binToDecTrue() {
+        var ans = converter.binToDec("1111")
+        assertTrue(ans == "15")
+    }
+    @Test
+    @DisplayName("Binary to Decimal: Equals")
+    fun binToDecEquals() {
+        var ans = converter.binToDec("0001")
+        assertEquals(ans, "1")
+    }
+    @Test
+    @DisplayName("Binary to Decimal: False")
+    fun binToDecFalse() {
+        var ans = converter.binToDec("1110")
+        assertFalse(ans == "8")
+    }
+
+    //multiple conversions
+    @Test
+    @DisplayName("Multiple Decimal")
+    fun multDec() {
+        var ans = converter.decToBin("15")
+        ans = converter.binToHex(ans)
+        ans = converter.hexadecimalToDecimal(ans)
+        assertTrue(ans == "15")
+    }
+    @Test
+    @DisplayName("Multiple Binary")
+    fun multBin() {
+        var ans = converter.binToDec("1010")
+        ans = converter.decToHex(ans)
+        ans = converter.hexadecimalToBinary(ans)
+        assertTrue(ans == "1010")
+    }
+    @Test
+    @DisplayName("Multiple Hex")
+    fun multHex() {
+        var ans = converter.hexadecimalToBinary("f")
+        ans = converter.binToDec(ans)
+        ans = converter.decToHex(ans)
+        assertTrue(ans == "f")
+    }
+
     
 }

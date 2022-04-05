@@ -17,6 +17,7 @@ import org.junit.jupiter.api.Test
 class JUnitTesting {
 
     internal val converter = Conversion_Code()
+    internal val calculator = Calculator_Code()
 
     //dec to binary tests
     @Test
@@ -71,6 +72,26 @@ class JUnitTesting {
         var ans = converter.decToHex("22")
         assertFalse(ans == "141")
     }
-    
-    
+
+    //
+    @Test
+    @DisplayName("Multiplication Test 1: Bin & Bin")
+    fun multBinBin() {
+        var ans = calculator.multiplication("1001", "10", 1, 1)
+        assertTrue(ans == "18")
+    }
+
+    @Test
+    @DisplayName("Multiplication Test 2: Hex & Decimal")
+    fun multHexDec() {
+        var ans = calculator.multiplication("a", "7", 0, 2)
+        assertTrue(ans == "70")
+    }
+
+    @Test
+    @DisplayName("Multiplication Test 3: Hex & Bin")
+    fun multHexBin() {
+        var ans = calculator.multiplication("b", "10", 0, 1)
+        assertTrue(ans == "22")
+    }
 }

@@ -17,6 +17,7 @@ import org.junit.jupiter.api.Test
 class JUnitTesting {
 
     internal val converter = Conversion_Code()
+    internal val calculator = Calculator_Code()
 
     //dec to binary tests
     @Test
@@ -207,4 +208,45 @@ class JUnitTesting {
     }
 
     
+    @Test
+    @DisplayName("Subtraction Operations(Decimal): Equals")
+    fun subtractionOperationsDecimalEquals() {
+        var ans = calculator.subtraction("1000", "500", 2, 2)
+        assertEquals(ans, "500")
+    }
+
+    @Test
+    @DisplayName("Subtraction Operations(Hex) : Equals")
+    fun subtractionOperationsHexEquals() {
+        var ans = calculator.subtraction("64", "32", 0, 0)
+        assertEquals(ans, "50")
+    }
+
+    @Test
+    @DisplayName("Subtraction Operations(Binary): Equals")
+    fun subtractionOperationsBinaryEquals() {
+        var ans = calculator.subtraction ("11100", "1110", 1, 1)
+        assertEquals(ans, "14")
+    }
+
+    @Test
+    @DisplayName("Addition Operations(Binary): Equals")
+    fun additionOperationsBinaryEquals() {
+        var ans = calculator.addition("11100", "1110", 1, 1)
+        assertEquals(ans, "42")
+    }
+
+    @Test
+    @DisplayName("Addition Operations(Decimal): Equals")
+    fun additionOperationsDecimalEquals() {
+        var ans = calculator.addition("495", "505", 2, 2)
+        assertEquals(ans, "1000")
+    }
+
+    @Test
+    @DisplayName("Addition Operations (Hex): Equals")
+    fun additionOperationsHexEquals() {
+        var ans = calculator.addition("64", "32" , 0, 0)
+        assertEquals(ans, "150")
+    }
 }

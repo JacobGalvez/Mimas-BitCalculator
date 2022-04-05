@@ -96,4 +96,25 @@ class JUnitTesting {
         var ans = calculator.subtraction ("11100", "1110", 1, 1)
         assertEquals(ans, "14")
     }
+
+    @Test
+    @DisplayName("Addition Operations(Binary): Equals")
+    fun additionOperationsBinaryEquals() {
+        var ans = calculator.addition("11100", "1110", 1, 1)
+        assertEquals(ans, "42")
+    }
+
+    @Test
+    @DisplayName("Addition Operations(Decimal): Equals")
+    fun additionOperationsDecimalEquals() {
+        var ans = calculator.addition("495", "505", 2, 2)
+        assertEquals(ans, "1000")
+    }
+
+    @Test
+    @DisplayName("Addition Operations (Hex): Equals")
+    fun additionOperationsHexEquals() {
+        var ans = calculator.addition("64", "32" , 0, 0)
+        assertEquals(ans, "150")
+    }
 }

@@ -47,8 +47,7 @@ class ConverterActivity : AppCompatActivity() {
                 if (insertText == "")
                     finalSolution = "0"
                 else {
-                    convertNow()
-                    answer.text = finalSolution
+                    //answer.text = finalSolution
                 }
             }
         }
@@ -66,8 +65,7 @@ class ConverterActivity : AppCompatActivity() {
                 if (insertText == "")
                     finalSolution = "0"
                 else {
-                    convertNow()
-                    answer.text = finalSolution
+                    //answer.text = finalSolution
                 }
             }
         }
@@ -76,48 +74,49 @@ class ConverterActivity : AppCompatActivity() {
         answer.text = "final solution"
     }
 
-    fun convertNow() {
+    fun submit(view: View) {
         //variables for desired parameters
         //input text (string): insertText
+        insertText = inputText.text.toString()
 
         //hex to hex case
         if(inputBaseChoice == 0 && convertBaseDesiredChoice == 0){
-            finalSolution = insertText
+            answer.text = insertText
         }
         //hex to binary case
         else if(inputBaseChoice == 0 && convertBaseDesiredChoice == 1){
-            finalSolution = con.hexadecimalToBinary(insertText)
+            answer.text = con.hexadecimalToBinary(insertText)
         }
         //hex to decimal case
         else if(inputBaseChoice == 0 && convertBaseDesiredChoice == 2){
-            finalSolution = con.hexadecimalToDecimal(insertText)
+            answer.text = con.hexadecimalToDecimal(insertText)
         }
         //binary to hex case
         else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 0){
-            finalSolution = con.binToHex(insertText)
+            answer.text = con.binToHex(insertText)
         }
         //binary to binary case
         else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 1){
-            finalSolution = insertText
+            answer.text = insertText
         }
         //binary to decimal case
         else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 2){
-            finalSolution = con.binToDec(insertText)
+            answer.text = con.binToDec(insertText)
         }
         //decimal to hex case
         else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 0){
-            finalSolution = con.decToHex(insertText)
+            answer.text = con.decToHex(insertText)
         }
         //decimal to binary case
         else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 1){
-            finalSolution = con.decToBin(insertText)
+            answer.text = con.decToBin(insertText)
         }
         //decimal to decimal case
         else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 2){
-            finalSolution = insertText
+            answer.text = insertText
         }
         else{
-            finalSolution = "system error"
+            answer.text = "system error"
         }
 
     }

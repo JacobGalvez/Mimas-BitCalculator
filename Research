@@ -9,5 +9,19 @@
 // End
 
 // Jacob Section Begin
-
+// Jacob - Design Pattern Impelementation Research
+//  - We are conducting research so that we can implement a design pattern into our code. We wanted a running application
+// and now we want to improve the extendability and design to our code.
+//  - From my research it looks like the facade design pattern is one we have been somewhat following on our own.
+//  - I believe if we tweak some things around we will be able to smoothly implement this design.
+//  - The facade design pattern is a structural design pattern that provides a simplified interace to a library,
+// a framwork, or any other complex set of classes.
+//  - Having a facade is handy when you need to integrate your app with a sophisticated library that has dozens of
+// of features (our calculation, history, and conversion features), but you just need a bit of its functionality
+//  - An example of a facade class is when you call a shop to place a phone order, an operator is your facade to all
+// the services and departments of the shop, so you need an operator to be able to access all the other classes.
+//  - So using that analogy, the operator is the homescreen which allows the user to gain access to the conversion,
+// calculator, and history side of things. The user must always go back to the homescreen (operator) if they want
+// to access another part of the application.
+//  - In short, a facade has a "master" class which allows access to other functions in other classes.
 // End

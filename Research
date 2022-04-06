@@ -1,7 +1,15 @@
-// Here is our Research File for all reasearch tasks
+// Here is our Research File for all research tasks
 
 // Nicolas Section Begin
-
+//    -For research done for our android application I have been looking at what design pattern or
+//      patterns to better structure our code.
+//    -I have also been looking into the SOLID Principles and evaluating the code that I have written
+//      so that I can follow these practices.
+//    -When looking into Design patterns I have decided on using the Facade pattern moving forward.
+//    -Using a Facade design pattern will help us have a front end to show for the user to use on the
+//      application while hiding the complexities of the conversions and calculations in the background.        
+//    -With my research done I will be in a better position to produce well written code and finalize
+//      a structure to complete the application.
 // End
 
 // Matthew Section Begin

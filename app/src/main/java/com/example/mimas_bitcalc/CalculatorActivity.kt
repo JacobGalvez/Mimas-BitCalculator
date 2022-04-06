@@ -92,12 +92,18 @@ class CalculatorActivity : AppCompatActivity() {
     fun submit(view: View){
         insertText1 = inputText1.text.toString()
         insertText2 = inputText2.text.toString()
-        calculateNow()
-        println(insertText1)
-        println(insertText2)
-        println(input1BaseChoice)
-        println(input2BaseChoice)
-        calculateAnswer.text = finalSolution
+
+        if (insertText1 == "" || insertText2 == "") {
+            calculateAnswer.text = "0"
+        }
+        else {
+            calculateNow()
+            println(insertText1)
+            println(insertText2)
+            println(input1BaseChoice)
+            println(input2BaseChoice)
+            calculateAnswer.text = finalSolution
+        }
     }
 
     private fun calculateNow(){

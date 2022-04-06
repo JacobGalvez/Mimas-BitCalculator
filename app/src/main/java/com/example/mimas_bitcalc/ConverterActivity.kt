@@ -47,8 +47,7 @@ class ConverterActivity : AppCompatActivity() {
                 if (insertText == "")
                     finalSolution = "0"
                 else {
-                    convertNow()
-                    answer.text = finalSolution
+                    //answer.text = finalSolution
                 }
             }
         }
@@ -66,8 +65,7 @@ class ConverterActivity : AppCompatActivity() {
                 if (insertText == "")
                     finalSolution = "0"
                 else {
-                    convertNow()
-                    answer.text = finalSolution
+                    //answer.text = finalSolution
                 }
             }
         }
@@ -76,9 +74,10 @@ class ConverterActivity : AppCompatActivity() {
         answer.text = "final solution"
     }
 
-    fun convertNow() {
+    fun submit(view: View) {
         //variables for desired parameters
         //input text (string): insertText
+        insertText = inputText.text.toString()
 
         //hex to hex case
         if(inputBaseChoice == 0 && convertBaseDesiredChoice == 0){
@@ -126,7 +125,7 @@ class ConverterActivity : AppCompatActivity() {
             con.conversionHistory(insertText)
         }
         else{
-            finalSolution = "system error"
+            answer.text = "system error"
         }
 
     }

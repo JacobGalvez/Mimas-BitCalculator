@@ -66,6 +66,7 @@ We have improved functions to perform binary, hexadecimal, and decimal conversio
 * URL for Commit: https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/3136793723aac5062f6dcdd817dcde57b8440adb
 * Added Design Pattern Impelentation Research (BIT-44)
 * URL for Commit: https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/8403be9a195c0e33d855a09b8ead41156687e856
+* URL for Pull Request: https://bitbucket.org/cs3398-s22-mimas/bitcalc/pull-requests/5/jacob-galvez-sprint-2-pr
 * Next Steps: Code Refactoring, Input Validation, User Testing (for Bugs), adding in some more number bases, and finishing up the history page.
 ### Matthew Whieldon
 * Fixed gradle to work with kotlin imports, outputting test results in the command line, and made sure gradle did not output an error. (BIT-57)

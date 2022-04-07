@@ -55,7 +55,14 @@
 ### Jacob Galvez
 
 ### Matthew Whieldon
-
+* Fixed gradle to work with kotlin imports, outputting test results in the command line, and made sure gradle did not output an error. (BIT-57)
+* URL for gradle fixes: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/build.gradle 
+* URL for using kotlin imports: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/test/java/com/example/mimas_bitcalc/ExampleUnitTest.kt
+* Created JUnit tests for Binary, Hexadecimal, and decimal conversions. Also, test functions for using multiple conversions. (BIT-40)(BIT-41)(BIT-42)
+* URL: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/test/java/com/example/mimas_bitcalc/ExampleUnitTest.kt
+* Conducted research for design pattern implementation. (BIT-45)
+* URL: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/Research
+* Next Steps: Input validation, adding more conversion functions such as octal, and adding JUnit tests for the new conversion functions added in sprint 3.
 ### Nicolas Canals
 * Updated UI for the Main Page of the Application (BIT-34)
 * URL for the kotlin code for the main page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/java/com/example/mimas_bitcalc/MainActivity.kt

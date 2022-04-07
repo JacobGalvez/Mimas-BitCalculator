@@ -67,7 +67,7 @@
 * URL for the kotlin code for the calculator page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/java/com/example/mimas_bitcalc/CalculatorActivity.kt
 * URL for the XML layout code for the calculator page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/res/layout/activity_calculator.xml
 * Added Tests for the multiplication function of our calculator handling hexadecimal, decimal, binary (BIT-38)
-* URL for the test code for the multiplication calculations: 
+* URL for the test code for the multiplication calculations: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/test/java/com/example/mimas_bitcalc/ExampleUnitTest.kt
 * Research done to implement design patterns / SOLID Principles (BIT-43)
 * URL for the research file: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/Research
 * Next Steps: Create History Page, Finalize Layout for all 4 pages (main, converter, calculator, History), Fix bugs handling input validation, Organize test code and make tests for all possible calculation and conversion possibilities, Clean out "debt" in all code

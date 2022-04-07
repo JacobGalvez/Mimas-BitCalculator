@@ -52,6 +52,9 @@
 * Next Steps: Fix Layout for all 3 pages (main, converter, calculator) to have more user friendly layouts, Create History Page, Clean out "debt" from all code made, add in 1 test 
 
 ## Sprint 2 ##
+### Status of Project
+We have improved functions to perform binary, hexadecimal, and decimal conversions. Also, we can perform addition, subtraction, division, and multiplication on the bases previously stated. We have added JUnit testing that is printed to the console on all of our conversion and math functions. We have an updated user interface that is more user-friendly.
+
 ### Jacob Galvez
 * Fixed bug that that gave the wrong value of a conversion for Binary to Decimal Function (BIT-36)
 * URL for Commit: https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/be64fc09cbe2e3b23a298ebac148f14ce818ebba  
@@ -73,6 +76,7 @@
 * Conducted research for design pattern implementation. (BIT-45)
 * URL: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/Research
 * Next Steps: Input validation, adding more conversion functions such as octal, and adding JUnit tests for the new conversion functions added in sprint 3.
+* Status: Conversion functions for binary, decimal, and hexadecimal. Addition, subtraction, division, and multiplication functions for the bases. JUnit tests for conversion and math functions. Updated UI.
 ### Nicolas Canals
 * Updated UI for the Main Page of the Application (BIT-34)
 * URL for the kotlin code for the main page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/java/com/example/mimas_bitcalc/MainActivity.kt

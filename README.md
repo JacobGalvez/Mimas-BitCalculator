@@ -53,7 +53,17 @@
 
 ## Sprint 2 ##
 ### Jacob Galvez
-
+* Fixed bug that that gave the wrong value of a conversion for Binary to Decimal Function (BIT-36)
+* URL for Commit: https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/be64fc09cbe2e3b23a298ebac148f14ce818ebba  
+* Implemented a way for history data to be saved (Back-End Only) (BIT-55)
+* URL for Commit: https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/b87825a5b36b45aae1b4ae09d68c87377c968e73
+* Added Test Cases for Calculator Addition Operations (BIT-47)
+* URL for Commit: https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/e822f5a174e502922f77a6089dc56ff758121715
+* Added Test Cases for Calculator Subtraction Operations (BIT-50)
+* URL for Commit: https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/3136793723aac5062f6dcdd817dcde57b8440adb
+* Added Design Pattern Impelentation Research (BIT-44)
+* URL for Commit: https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/8403be9a195c0e33d855a09b8ead41156687e856
+* Next Steps: Code Refactoring, Input Validation, User Testing (for Bugs), adding in some more number bases, and finishing up the history page.
 ### Matthew Whieldon
 * Fixed gradle to work with kotlin imports, outputting test results in the command line, and made sure gradle did not output an error. (BIT-57)
 * URL for gradle fixes: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/build.gradle 

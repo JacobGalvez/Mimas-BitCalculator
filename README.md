@@ -69,5 +69,5 @@
 * Added Tests for the multiplication function of our calculator handling hexadecimal, decimal, binary (BIT-38)
 * URL for the test code for the multiplication calculations: 
 * Research done to implement design patterns / SOLID Principles (BIT-43)
-* URL for the research file: 
+* URL for the research file: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/Research
 * Next Steps: Create History Page, Finalize Layout for all 4 pages (main, converter, calculator, History), Fix bugs handling input validation, Organize test code and make tests for all possible calculation and conversion possibilities, Clean out "debt" in all code

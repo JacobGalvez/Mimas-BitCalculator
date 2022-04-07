@@ -50,3 +50,24 @@
 * URL for the kotlin code for the calculator page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/java/com/example/mimas_bitcalc/CalculatorActivity.kt
 * URL for the XML layout code for the calculator page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/res/layout/activity_calculator.xml
 * Next Steps: Fix Layout for all 3 pages (main, converter, calculator) to have more user friendly layouts, Create History Page, Clean out "debt" from all code made, add in 1 test 
+
+## Sprint 2 ##
+### Jacob Galvez
+
+### Matthew Whieldon
+
+### Nicolas Canals
+* Updated UI for the Main Page of the Application (BIT-34)
+* URL for the kotlin code for the main page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/java/com/example/mimas_bitcalc/MainActivity.kt
+* URL for the XML layout code for the main page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/res/layout/activity_main.xml
+* Updated UI for the Converter Page of the Application and fixed bugs with inputs for conversions(BIT-37)
+* URL for the kotlin code for the converter page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/java/com/example/mimas_bitcalc/ConverterActivity.kt
+* URL for the XML layout code for the converter page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/res/layout/activity_converter.xml
+* Updated UI for the Calculator Page of the Application and fixed bugs with inputs for calculations(BIT-35)
+* URL for the kotlin code for the calculator page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/java/com/example/mimas_bitcalc/CalculatorActivity.kt
+* URL for the XML layout code for the calculator page: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/app/src/main/res/layout/activity_calculator.xml
+* Added Tests for the multiplication function of our calculator handling hexadecimal, decimal, binary (BIT-38)
+* URL for the test code for the multiplication calculations: 
+* Research done to implement design patterns / SOLID Principles (BIT-43)
+* URL for the research file: 
+* Next Steps: Create History Page, Finalize Layout for all 4 pages (main, converter, calculator, History), Fix bugs handling input validation, Organize test code and make tests for all possible calculation and conversion possibilities, Clean out "debt" in all code

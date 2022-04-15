@@ -32,10 +32,26 @@ class Conversion_Code {
 
 
     fun binToDec(num1: String): String {
+        var error = ""
+        //won't crash if number is too long
+        if(num1.length > 31){
+            error = "Input Max Reached"
+            return error
+        }
+        var i = 0
+        while(i < num1.length){
+            //make sure string has valid characters only
+            if(num1.get(i) != '0' && num1.get(i) != '1' && num1.get(i) != '-'){
+                error = "Incorrect Input"
+                return error
+            }
+            i++
+        }
 
         val convertedNumber = Integer.parseInt(num1, 2)
 
         val userDecimal = convertedNumber.toString(10)
+
 
         answer = userDecimal
         baseTypeChange = " (binary) Converted to (decimal): "
@@ -44,14 +60,38 @@ class Conversion_Code {
     }
 
     fun binToHex(num1: String): String {
+        var error = ""
+        //input validation
+        //won't crash if number is too long
+        if(num1.length > 31){
+            error = "Input Max Reached"
+            return error
+        }
+        var i = 0
+        while(i < num1.length){
+            //make sure string has valid characters only
+            if(num1.get(i) != '0' && num1.get(i) != '1' && num1.get(i) != '-'){
+                error = "Incorrect Input"
+                return error
+            }
+            i++
+        }
+
 
         val convertedNumber = Integer.parseInt(num1, 2)
 
-        val userHex = convertedNumber.toString(16)
+        var userHex = convertedNumber.toString(16)
+
+        //-0 is not a valid solution
+        if(userHex == "-0"){
+            userHex = "0"
+        }
 
         answer = userHex
         baseTypeChange = " (binary) Converted to (hexadecimal): "
+
         return userHex
+
     }
     
     fun decToBin(num1: String): String {

@@ -72,6 +72,7 @@
         android:textColor="@color/black"
         android:textColorHint="#757575"
         android:textSize="22sp"
+        android:maxLength="15"
         app:layout_constraintBottom_toTopOf="@+id/convert_question"
         app:layout_constraintEnd_toStartOf="@+id/spinner1"
         app:layout_constraintHorizontal_bias="0.5"

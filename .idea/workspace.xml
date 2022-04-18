@@ -14,8 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ebd5202d-a084-4064-a41e-d291ac019ef3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mimas_bitcalc/CalculatorActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mimas_bitcalc/CalculatorActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mimas_bitcalc/ConverterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mimas_bitcalc/ConverterActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_calculator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_calculator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_converter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_converter.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

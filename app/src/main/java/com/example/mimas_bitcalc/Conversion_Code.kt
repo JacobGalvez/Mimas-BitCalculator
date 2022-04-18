@@ -5,6 +5,20 @@ class Conversion_Code {
     var answer = ""
     var baseTypeChange = ""
     fun hexadecimalToBinary(num1: String): String {
+        var error = ""
+
+        var i = 0
+        //checks if the given string is using correct chars
+        //user is able to use capitals or lowercase
+        // do not allow '-' will cause incorrect output
+        while(i < num1.length){
+            var hexChar = num1.get(i)
+            if((hexChar < '0' || hexChar > '9') && (hexChar < 'a' || hexChar > 'f') && (hexChar < 'A' || hexChar > 'F')){
+                error = "Incorrect Input"
+                return error
+            }
+            i++
+        }
 
         val convertedNumber = Integer.parseInt(num1, 16) //Parse's the integer from string and calculates base16->base10
 
@@ -17,6 +31,20 @@ class Conversion_Code {
     }
 
     fun hexadecimalToDecimal(num1: String): String {
+        var error = ""
+
+        var i = 0
+        //checks if the given string is using correct chars
+        //user is able to use capitals or lowercase
+        while(i < num1.length){
+            var hexChar = num1.get(i)
+            if((hexChar < '0' || hexChar > '9') && (hexChar < 'a' || hexChar > 'f') && (hexChar < 'A' || hexChar > 'F') && (hexChar != '-')){
+                error = "Incorrect Input"
+                return error
+            }
+            i++
+        }
+
 
         val convertedNumber = Integer.parseInt(num1, 16) // parses the integer from string and calculates base16->base10
 

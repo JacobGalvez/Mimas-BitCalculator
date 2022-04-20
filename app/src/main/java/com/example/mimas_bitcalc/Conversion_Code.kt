@@ -123,6 +123,15 @@ class Conversion_Code {
     }
     
     fun decToBin(num1: String): String {
+        var error = ""
+        var i = 0
+        while(i < num1.length){
+            if(num1.get(i) < '0' || num1.get(i) > '9'){
+                error = "Incorrect Input"
+                return error
+            }
+            i++
+        }
 
         val decimal = num1.toInt()
         val binary = Integer.toBinaryString(decimal)
@@ -133,6 +142,16 @@ class Conversion_Code {
     }
 
     fun decToHex(num1: String): String {
+        var error = ""
+        var i = 0
+        while(i < num1.length){
+            if((num1.get(i) < '0' || num1.get(i) > '9') && (num1.get(i) != '-')){
+                error = "Incorrect Input"
+                return error
+            }
+            i++
+        }
+
 
         val convertedNumber = Integer.parseInt(num1, 10)
 

@@ -162,14 +162,4 @@ class Conversion_Code {
         return userHex
     }
 
-    fun conversionHistory(num1: String): String {
-        val origNumber = num1
-        val convNumber = answer
-
-        val log = (origNumber + baseTypeChange + convNumber)
-
-        System.out.println(log)
-
-        return log
-    }
 }

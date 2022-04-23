@@ -61,11 +61,6 @@ class Conversion_Code {
 
     fun binToDec(num1: String): String {
         var error = ""
-        //won't crash if number is too long
-        if(num1.length > 31){
-            error = "Input Max Reached"
-            return error
-        }
         var i = 0
         while(i < num1.length){
             //make sure string has valid characters only
@@ -90,11 +85,6 @@ class Conversion_Code {
     fun binToHex(num1: String): String {
         var error = ""
         //input validation
-        //won't crash if number is too long
-        if(num1.length > 31){
-            error = "Input Max Reached"
-            return error
-        }
         var i = 0
         while(i < num1.length){
             //make sure string has valid characters only
@@ -160,6 +150,126 @@ class Conversion_Code {
         answer = userHex
         baseTypeChange = " (decimal) Converted to (hexadecimal): "
         return userHex
+    }
+
+    fun octToBin(num1: String): String {
+        var error = ""
+        var i = 0
+        while(i < num1.length){
+            if(num1.get(i) < '0' || num1.get(i) > '7'){
+                error = "Incorrect Input"
+                return error
+            }
+            i++
+        }
+        
+        val octal = Integer.parseInt(num1, 8)
+
+        val binary = Integer.toBinaryString(octal)
+
+        answer = binary
+        baseTypeChange = " (octal) Converted to (binary): "
+        return binary
+    }
+
+    fun octToDec(num1: String): String {
+        var error = ""
+        var i = 0
+        while(i < num1.length){
+            if(num1.get(i) < '0' || num1.get(i) > '7'){
+                error = "Incorrect Input"
+                return error
+            }
+            i++
+        }
+
+        val decimal = Integer.parseInt(num1, 8)
+
+        answer = decimal.toString()
+        baseTypeChange = " (octal) Converted to (decimal): "
+        return decimal.toString()
+    } 
+
+    fun octToHex(num1: String): String {
+        var error = ""
+        var i = 0
+        while(i < num1.length){
+            if(num1.get(i) < '0' || num1.get(i) > '7'){
+                error = "Incorrect Input"
+                return error
+            }
+            i++
+        }
+        
+        val octal = Integer.parseInt(num1, 8)
+
+        val hex = Integer.toHexString(octal)
+
+        answer = hex
+        baseTypeChange = " (octal) Converted to (hexadecimal): "
+        return hex
+    }
+
+    fun binToOct(num1: String): String {
+        var error = ""
+        var i = 0
+        while(i < num1.length){
+            //make sure string has valid characters only
+            if(num1.get(i) != '0' && num1.get(i) != '1'){
+                error = "Incorrect Input"
+                return error
+            }
+            i++
+        }
+
+        val binary = Integer.parseInt(num1, 2)
+
+        val octal = Integer.toOctalString(binary)
+
+        answer = octal
+        baseTypeChange = " (binary) Converted to (octal): "
+        return octal
+    }
+
+    fun decToOct(num1: String): String {
+        var error = ""
+        var i = 0
+        while(i < num1.length){
+            if((num1.get(i) < '0' || num1.get(i) > '9')){
+                error = "Incorrect Input"
+                return error
+            }
+            i++
+        }
+
+        val decimal = num1.toInt()
+
+        val octal = Integer.toOctalString(decimal)
+
+        answer = octal
+        baseTypeChange = " (decimal) Converted to (octal): "
+        return octal
+    }
+
+    fun hexToOct(num1: String): String {
+        var error = ""
+        var i = 0
+        while(i < num1.length){
+            var hexChar = num1.get(i)
+            if((hexChar < '0' || hexChar > '9') && (hexChar < 'a' || hexChar > 'f') && (hexChar < 'A' || hexChar > 'F')){
+                error = "Incorrect Input"
+                return error
+            }
+            i++
+        }
+
+        val hex = Integer.parseInt(num1, 16)
+
+        val octal = Integer.toOctalString(hex)
+
+        answer = octal
+        baseTypeChange = " (hexadecimal) Converted to (octal): "
+        return octal
     }
 
 }

@@ -162,4 +162,56 @@ class Conversion_Code {
         return userHex
     }
 
+    fun octToBin(num1: String): String {
+        
+        val octal = Integer.parseInt(num1, 8)
+
+        val binary = Integer.toBinaryString(octal)
+
+        return binary
+    }
+
+    fun octToDec(num1: String): String {
+
+        val decimal = Integer.parseInt(num1, 8)
+
+        return decimal.toString()
+    } 
+
+    fun octToHex(num1: String): String {
+        
+        val octal = Integer.parseInt(num1, 8)
+
+        val hex = Integer.toHexString(octal)
+
+        return hex
+    }
+
+    fun binToOct(num1: String): String {
+
+        val binary = Integer.parseInt(num1, 2)
+
+        val octal = Integer.toOctalString(binary)
+
+        return octal
+    }
+
+    fun decToOct(num1: String): String {
+
+        val decimal = num1.toInt()
+
+        val octal = Integer.toOctalString(decimal)
+
+        return octal
+    }
+
+    fun hexToOct(num1: String): String {
+
+        val hex = Integer.parseInt(num1, 16)
+
+        val octal = Integer.toOctalString(hex)
+
+        return octal
+    }
+
 }

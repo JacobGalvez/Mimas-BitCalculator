@@ -8,6 +8,7 @@ import android.widget.*
 
 class ConverterActivity : AppCompatActivity() {
     internal val con = Conversion_Code()
+    internal val hist = HistoryActivity()
 
     private lateinit var input: Spinner
     private lateinit var conversionDesired: Spinner
@@ -86,47 +87,47 @@ class ConverterActivity : AppCompatActivity() {
             //hex to hex case
             if(inputBaseChoice == 0 && convertBaseDesiredChoice == 0){
                 answer.text = insertText
-                con.conversionHistory(insertText)
+                hist.conversionHistory(insertText, " (hex) converted to hex: ", insertText)
             }
             //hex to binary case
             else if(inputBaseChoice == 0 && convertBaseDesiredChoice == 1){
                 answer.text = con.hexadecimalToBinary(insertText)
-                con.conversionHistory(insertText)
+                hist.conversionHistory(insertText, " (hex) converted to binary: ", con.hexadecimalToBinary(insertText))
             }
             //hex to decimal case
             else if(inputBaseChoice == 0 && convertBaseDesiredChoice == 2){
                 answer.text = con.hexadecimalToDecimal(insertText)
-                con.conversionHistory(insertText)
+                hist.conversionHistory(insertText, "(hex) converted to decimal: ", con.hexadecimalToDecimal(insertText))
             }
             //binary to hex case
             else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 0){
                 answer.text = con.binToHex(insertText)
-                con.conversionHistory(insertText)
+                hist.conversionHistory(insertText, "(binary) converted to hex: ", con.binToHex(insertText))
             }
             //binary to binary case
             else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 1){
                 answer.text = insertText
-                con.conversionHistory(insertText)
+                hist.conversionHistory(insertText, "(binary) converted to binary: ", insertText)
             }
             //binary to decimal case
             else if(inputBaseChoice == 1 && convertBaseDesiredChoice == 2){
                 answer.text = con.binToDec(insertText)
-                con.conversionHistory(insertText)
+                hist.conversionHistory(insertText, "(binary) converted to decimal: ", con.binToDec(insertText))
             }
             //decimal to hex case
             else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 0){
                 answer.text = con.decToHex(insertText)
-                con.conversionHistory(insertText)
+                hist.conversionHistory(insertText, "(decimal) converted to hex: " , con.decToHex(insertText))
             }
             //decimal to binary case
             else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 1){
                 answer.text = con.decToBin(insertText)
-                con.conversionHistory(insertText)
+                hist.conversionHistory(insertText, "(decimal) converted to binary: ", con.decToBin(insertText))
             }
             //decimal to decimal case
             else if(inputBaseChoice == 2 && convertBaseDesiredChoice == 2){
                 answer.text = insertText
-                con.conversionHistory(insertText)
+                hist.conversionHistory(insertText, "(decimal) converted to decimal: ", insertText)
             }
             else {
                 answer.text = "system error"

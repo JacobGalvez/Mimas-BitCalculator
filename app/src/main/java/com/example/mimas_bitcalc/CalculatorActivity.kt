@@ -1,10 +1,12 @@
 package com.example.mimas_bitcalc
 
+import android.content.Intent
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.example.mimas_bitcalc.MainActivity.Companion.SG
 /*
 
 DONT HAVE TO WORRY ABOUT THE CONVERSION PRECISION JUST BE PRECISE WHEN YOU MULTIPLY
@@ -28,6 +30,7 @@ class CalculatorActivity : AppCompatActivity() {
     var finalSolution = "  "
     var insertText1 = "0"
     var insertText2 = "0"
+    var calHisVal = " "
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +43,7 @@ class CalculatorActivity : AppCompatActivity() {
         inputText1 = findViewById<View>(R.id.editText1_cal) as EditText
         inputText2 = findViewById<View>(R.id.editText2_cal) as EditText
 
-        val baseOptions = arrayOf("Hexadecimal", "Binary", "Decimal")
+        val baseOptions = arrayOf("Hexadecimal", "Binary", "Decimal", "Octal")
         input1.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, baseOptions)
         input2.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, baseOptions)
 
@@ -122,25 +125,30 @@ class CalculatorActivity : AppCompatActivity() {
         //addition
         if(operationDesiredChoice == 0){
             finalSolution = cal.addition(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
-            hist.calculatorHistory(insertText1, input1BaseChoice, input2BaseChoice, insertText2, " + ", finalSolution)
+            calHisVal = hist.calculatorHistory(insertText1, input1BaseChoice, input2BaseChoice, insertText2, " + ", finalSolution)
         }
         //subtraction
         else if(operationDesiredChoice == 1){
             finalSolution = cal.subtraction(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
-            hist.calculatorHistory(insertText1, input1BaseChoice, input2BaseChoice, insertText2, " - ", finalSolution)
+            calHisVal = hist.calculatorHistory(insertText1, input1BaseChoice, input2BaseChoice, insertText2, " - ", finalSolution)
         }
         //multiplication
         else if(operationDesiredChoice == 2){
             finalSolution = cal.multiplication(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
-            hist.calculatorHistory(insertText1, input1BaseChoice, input2BaseChoice, insertText2, " * ", finalSolution)
+            calHisVal = hist.calculatorHistory(insertText1, input1BaseChoice, input2BaseChoice, insertText2, " * ", finalSolution)
         }
         //division
         else if(operationDesiredChoice == 3){
             finalSolution = cal.division(insertText1, insertText2, input1BaseChoice, input2BaseChoice)
-            hist.calculatorHistory(insertText1, input1BaseChoice, input2BaseChoice, insertText2, " / ", finalSolution)
+            calHisVal = hist.calculatorHistory(insertText1, input1BaseChoice, input2BaseChoice, insertText2, " / ", finalSolution)
         }
         else{
             finalSolution = "system error"
         }
+        //hist.getCalHistory(calHisVal)
+        //val intent = Intent(this@CalculatorActivity,HistoryActivity::class.java)
+        //intent.putExtra("CalculatorHis",calHisVal)
+        //startActivity(intent)
+        SG.getCalculatorString(calHisVal)
     }
 }

@@ -7,6 +7,10 @@ import android.view.View
 import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
+    // This will be our history object to set and get string values for history page
+    companion object{
+        internal val SG = SetAndGet()
+    }
 
     private lateinit var btn_history_chk: Button
     private lateinit var btn_convert_chk: Button

@@ -2,13 +2,29 @@ package com.example.mimas_bitcalc
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.*
+import com.example.mimas_bitcalc.MainActivity.Companion.SG
 
 class HistoryActivity : AppCompatActivity() {
+    lateinit var converterHistory: TextView
+    lateinit var calculateHistory: TextView
 
+    lateinit var gotCalInput: String
+    lateinit var gotConInput: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history)
+
+        calculateHistory = findViewById<View>(R.id.Cal_History) as TextView
+        converterHistory = findViewById<View>(R.id.Con_History) as TextView
+
+        gotCalInput = SG.setNowCalculatorString()
+        gotConInput = SG.setNowConverterString()
+
+        converterHistory.text = gotConInput
+        calculateHistory.text = gotCalInput
     }
 
 
@@ -30,6 +46,7 @@ class HistoryActivity : AppCompatActivity() {
             0 -> "(hexadecimal)"
             1 -> "(binary)"
             2 -> "(decimal)"
+            3 -> "(octal)"
             else -> "ERROR"
         }
         var base2ToWords = when(base2) // gets the base of the second number and converts it to english.
@@ -37,6 +54,7 @@ class HistoryActivity : AppCompatActivity() {
             0 -> "(hexadecimal)"
             1 -> "(binary)"
             2 -> "(decimal)"
+            3 -> "(octal)"
             else -> "ERROR"
         }
 
@@ -48,5 +66,11 @@ class HistoryActivity : AppCompatActivity() {
         return log
     }
 
+    fun clear_hist(view: View) {
+        converterHistory.text = " "
+        calculateHistory.text = " "
+        SG.getConverterString(" ")
+        SG.getCalculatorString(" ")
+    }
 
 }

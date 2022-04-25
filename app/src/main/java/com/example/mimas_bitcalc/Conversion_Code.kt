@@ -2,23 +2,13 @@ package com.example.mimas_bitcalc
 
 class Conversion_Code {
 
+    private val valid = Input_Validation()
+
     var answer = ""
     var baseTypeChange = ""
     fun hexadecimalToBinary(num1: String): String {
-        var error = ""
 
-        var i = 0
-        //checks if the given string is using correct chars
-        //user is able to use capitals or lowercase
-        // do not allow '-' will cause incorrect output
-        while(i < num1.length){
-            var hexChar = num1.get(i)
-            if((hexChar < '0' || hexChar > '9') && (hexChar < 'a' || hexChar > 'f') && (hexChar < 'A' || hexChar > 'F')){
-                error = "Incorrect Input"
-                return error
-            }
-            i++
-        }
+        if(valid.hexValid(num1) != "") { return valid.hexValid(num1) }
 
         val convertedNumber = Integer.parseInt(num1, 16) //Parse's the integer from string and calculates base16->base10
 
@@ -31,20 +21,8 @@ class Conversion_Code {
     }
 
     fun hexadecimalToDecimal(num1: String): String {
-        var error = ""
 
-        var i = 0
-        //checks if the given string is using correct chars
-        //user is able to use capitals or lowercase
-        while(i < num1.length){
-            var hexChar = num1.get(i)
-            if((hexChar < '0' || hexChar > '9') && (hexChar < 'a' || hexChar > 'f') && (hexChar < 'A' || hexChar > 'F') && (hexChar != '-')){
-                error = "Incorrect Input"
-                return error
-            }
-            i++
-        }
-
+        if(valid.hexValidNegative(num1) != "") { return valid.hexValidNegative(num1) }
 
         val convertedNumber = Integer.parseInt(num1, 16) // parses the integer from string and calculates base16->base10
 
@@ -60,16 +38,8 @@ class Conversion_Code {
 
 
     fun binToDec(num1: String): String {
-        var error = ""
-        var i = 0
-        while(i < num1.length){
-            //make sure string has valid characters only
-            if(num1.get(i) != '0' && num1.get(i) != '1' && num1.get(i) != '-'){
-                error = "Incorrect Input"
-                return error
-            }
-            i++
-        }
+
+        if(valid.binValidNegative(num1) != "") { return valid.binValidNegative(num1) }
 
         val convertedNumber = Integer.parseInt(num1, 2)
 
@@ -83,18 +53,8 @@ class Conversion_Code {
     }
 
     fun binToHex(num1: String): String {
-        var error = ""
-        //input validation
-        var i = 0
-        while(i < num1.length){
-            //make sure string has valid characters only
-            if(num1.get(i) != '0' && num1.get(i) != '1' && num1.get(i) != '-'){
-                error = "Incorrect Input"
-                return error
-            }
-            i++
-        }
 
+        if(valid.binValidNegative(num1) != "") { return valid.binValidNegative(num1) }
 
         val convertedNumber = Integer.parseInt(num1, 2)
 
@@ -113,15 +73,8 @@ class Conversion_Code {
     }
     
     fun decToBin(num1: String): String {
-        var error = ""
-        var i = 0
-        while(i < num1.length){
-            if(num1.get(i) < '0' || num1.get(i) > '9'){
-                error = "Incorrect Input"
-                return error
-            }
-            i++
-        }
+
+        if(valid.decValid(num1) != "") { return valid.decValid(num1) }
 
         val decimal = num1.toInt()
         val binary = Integer.toBinaryString(decimal)
@@ -132,16 +85,8 @@ class Conversion_Code {
     }
 
     fun decToHex(num1: String): String {
-        var error = ""
-        var i = 0
-        while(i < num1.length){
-            if((num1.get(i) < '0' || num1.get(i) > '9') && (num1.get(i) != '-')){
-                error = "Incorrect Input"
-                return error
-            }
-            i++
-        }
 
+        if(valid.decValidNegative(num1) != "") { return valid.decValidNegative(num1) }
 
         val convertedNumber = Integer.parseInt(num1, 10)
 
@@ -153,16 +98,9 @@ class Conversion_Code {
     }
 
     fun octToBin(num1: String): String {
-        var error = ""
-        var i = 0
-        while(i < num1.length){
-            if(num1.get(i) < '0' || num1.get(i) > '7'){
-                error = "Incorrect Input"
-                return error
-            }
-            i++
-        }
-        
+
+        if(valid.octValid(num1) != "") { return valid.octValid(num1) }
+
         val octal = Integer.parseInt(num1, 8)
 
         val binary = Integer.toBinaryString(octal)
@@ -173,15 +111,8 @@ class Conversion_Code {
     }
 
     fun octToDec(num1: String): String {
-        var error = ""
-        var i = 0
-        while(i < num1.length){
-            if(num1.get(i) < '0' || num1.get(i) > '7'){
-                error = "Incorrect Input"
-                return error
-            }
-            i++
-        }
+
+        if(valid.octValid(num1) != "") { return valid.octValid(num1) }
 
         val decimal = Integer.parseInt(num1, 8)
 
@@ -191,16 +122,9 @@ class Conversion_Code {
     } 
 
     fun octToHex(num1: String): String {
-        var error = ""
-        var i = 0
-        while(i < num1.length){
-            if(num1.get(i) < '0' || num1.get(i) > '7'){
-                error = "Incorrect Input"
-                return error
-            }
-            i++
-        }
-        
+
+        if(valid.octValid(num1) != "") { return valid.octValid(num1) }
+
         val octal = Integer.parseInt(num1, 8)
 
         val hex = Integer.toHexString(octal)
@@ -211,16 +135,8 @@ class Conversion_Code {
     }
 
     fun binToOct(num1: String): String {
-        var error = ""
-        var i = 0
-        while(i < num1.length){
-            //make sure string has valid characters only
-            if(num1.get(i) != '0' && num1.get(i) != '1'){
-                error = "Incorrect Input"
-                return error
-            }
-            i++
-        }
+
+        if(valid.binValid(num1) != "") { return valid.binValid(num1) }
 
         val binary = Integer.parseInt(num1, 2)
 
@@ -232,15 +148,8 @@ class Conversion_Code {
     }
 
     fun decToOct(num1: String): String {
-        var error = ""
-        var i = 0
-        while(i < num1.length){
-            if((num1.get(i) < '0' || num1.get(i) > '9')){
-                error = "Incorrect Input"
-                return error
-            }
-            i++
-        }
+
+        if(valid.decValid(num1) != "") { return valid.decValid(num1) }
 
         val decimal = num1.toInt()
 
@@ -252,16 +161,8 @@ class Conversion_Code {
     }
 
     fun hexToOct(num1: String): String {
-        var error = ""
-        var i = 0
-        while(i < num1.length){
-            var hexChar = num1.get(i)
-            if((hexChar < '0' || hexChar > '9') && (hexChar < 'a' || hexChar > 'f') && (hexChar < 'A' || hexChar > 'F')){
-                error = "Incorrect Input"
-                return error
-            }
-            i++
-        }
+
+        if(valid.hexValid(num1) != "") { return valid.hexValid(num1) }
 
         val hex = Integer.parseInt(num1, 16)
 

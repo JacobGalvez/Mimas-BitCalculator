@@ -4,9 +4,6 @@ class Calculator_Code {
 
     private val converter = Conversion_Code()
 
-    // ADD A WAY FOR OCTAL CONVERSIONS
-
-
     fun addition(num1: String, num2: String, base1: Int, base2: Int): String {
 
         // switch statement for base1 that converts the number to decimal

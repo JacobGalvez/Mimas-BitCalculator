@@ -1,18 +1,15 @@
 package com.example.mimas_bitcalc
 
-import android.content.Intent
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import com.example.mimas_bitcalc.MainActivity.Companion.SG
-/*
 
-DONT HAVE TO WORRY ABOUT THE CONVERSION PRECISION JUST BE PRECISE WHEN YOU MULTIPLY
-OR DIVIDE BECAUSE THAT CAN PRODUCE DECIMALS
+//DON'T HAVE TO WORRY ABOUT THE CONVERSION PRECISION JUST BE PRECISE WHEN YOU MULTIPLY
+//OR DIVIDE BECAUSE THAT CAN PRODUCE DECIMALS
 
- */
 class CalculatorActivity : AppCompatActivity() {
     private val cal = Calculator_Code()
     private val hist = HistoryActivity()
@@ -60,8 +57,6 @@ class CalculatorActivity : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 insertText1 = inputText1.text.toString()
                 input1BaseChoice = position
-                //calculateNow()
-                //calculateAnswer.text = finalSolution
             }
         }
 
@@ -75,8 +70,6 @@ class CalculatorActivity : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 insertText2 = inputText2.text.toString()
                 input2BaseChoice = position
-                //calculateNow()
-                //calculateAnswer.text = finalSolution
             }
         }
 
@@ -89,8 +82,6 @@ class CalculatorActivity : AppCompatActivity() {
             @SuppressLint("SetTextI18n")
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 operationDesiredChoice = position
-                //calculateNow()
-                //calculateAnswer.text = finalSolution
             }
         }
 
@@ -107,10 +98,6 @@ class CalculatorActivity : AppCompatActivity() {
         }
         else {
             calculateNow()
-            //println(insertText1)
-           // println(insertText2)
-            //println(input1BaseChoice)
-            //println(input2BaseChoice)
             calculateAnswer.text = finalSolution
         }
     }
@@ -145,10 +132,6 @@ class CalculatorActivity : AppCompatActivity() {
         else{
             finalSolution = "system error"
         }
-        //hist.getCalHistory(calHisVal)
-        //val intent = Intent(this@CalculatorActivity,HistoryActivity::class.java)
-        //intent.putExtra("CalculatorHis",calHisVal)
-        //startActivity(intent)
         SG.getCalculatorString(calHisVal)
     }
 }

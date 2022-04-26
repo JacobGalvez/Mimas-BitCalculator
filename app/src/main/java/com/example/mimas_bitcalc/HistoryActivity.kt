@@ -67,10 +67,10 @@ class HistoryActivity : AppCompatActivity() {
     }
 
     fun clear_hist(view: View) {
-        converterHistory.text = " "
-        calculateHistory.text = " "
-        SG.getConverterString(" ")
-        SG.getCalculatorString(" ")
+        converterHistory.text = "History Cleared"
+        calculateHistory.text = "History Cleared"
+        SG.getConverterString("Nothing done here yet")
+        SG.getCalculatorString("Nothing done here yet")
     }
 
 }

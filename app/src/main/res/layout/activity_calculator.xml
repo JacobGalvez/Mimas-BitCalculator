@@ -30,14 +30,14 @@
         android:autofillHints=""
         android:hint="type here for input 1"
         android:inputType="text"
+        android:maxLength="15"
         android:minHeight="48dp"
         android:textColor="@color/black"
         android:textColorHint="#757575"
         android:textSize="22sp"
-        android:maxLength="15"
         app:layout_constraintBottom_toTopOf="@+id/spinner_operation"
         app:layout_constraintEnd_toStartOf="@+id/spinner2_cal"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calculator_title" />
 
@@ -70,7 +70,7 @@
 
     <Spinner
         android:id="@+id/spinner1_cal"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:contentDescription="@string/spinner_no_text"
         android:minHeight="48dp"
@@ -115,7 +115,7 @@
 
     <Spinner
         android:id="@+id/spinner2_cal"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:contentDescription="@string/spinner_no_text"
         android:minHeight="48dp"
@@ -152,5 +152,18 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText1_cal" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="BASES: Hexadecimal, Binary, Decimal, Octal"
+        android:textColor="@color/purple_500"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculator_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

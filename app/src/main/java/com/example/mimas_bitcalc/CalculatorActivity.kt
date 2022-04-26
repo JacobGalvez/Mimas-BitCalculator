@@ -43,7 +43,7 @@ class CalculatorActivity : AppCompatActivity() {
         inputText1 = findViewById<View>(R.id.editText1_cal) as EditText
         inputText2 = findViewById<View>(R.id.editText2_cal) as EditText
 
-        val baseOptions = arrayOf("Hexadecimal", "Binary", "Decimal", "Octal")
+        val baseOptions = arrayOf("HEX", "BIN", "DEC", "OCT")
         input1.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, baseOptions)
         input2.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, baseOptions)
 
@@ -95,7 +95,7 @@ class CalculatorActivity : AppCompatActivity() {
         }
 
         @SuppressLint("SetTextI18n")
-        calculateAnswer.text = "final_solution"
+        calculateAnswer.text = "......"
     }
 
     fun submit(view: View){

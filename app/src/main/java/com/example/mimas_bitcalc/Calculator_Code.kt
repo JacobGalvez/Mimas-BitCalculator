@@ -4,6 +4,7 @@ class Calculator_Code {
 
     private val converter = Conversion_Code()
 
+    // ADD A WAY FOR OCTAL CONVERSIONS
 
 
     fun addition(num1: String, num2: String, base1: Int, base2: Int): String {
@@ -31,7 +32,7 @@ class Calculator_Code {
         var solution = Integer.parseInt(firstNumber) + Integer.parseInt(secondNumber)
         var solutionString = solution.toString()
 
-        
+
         return solutionString
     }
 
@@ -64,65 +65,79 @@ class Calculator_Code {
         return solutionString
     }
 
-fun multiplication(num1: String, num2: String, base1: Int, base2: Int): String {
+    fun multiplication(num1: String, num2: String, base1: Int, base2: Int): String {
 
-    // switch statement for base1 that converts the number to decimal
-    // (for easier operations)
-    val firstNumber = when(base1) {
-        1 -> converter.binToDec(num1)
-        2 -> num1
-        0 -> converter.hexadecimalToDecimal(num1)
-        else -> "ERROR"
+        // switch statement for base1 that converts the number to decimal
+        // (for easier operations)
+        val firstNumber = when(base1) {
+            1 -> converter.binToDec(num1)
+            2 -> num1
+            0 -> converter.hexadecimalToDecimal(num1)
+            else -> "ERROR"
+        }
+
+        // switch statement for base2 that converts the number to decimal
+        // (for easier operations)
+        val secondNumber = when(base2) {
+
+            1 -> converter.binToDec(num2)
+            2 -> num2
+            0 -> converter.hexadecimalToDecimal(num2)
+            else -> "ERROR"
+        }
+
+        // uses the multiplication operation on the two numbers given and returns the number in a
+        // decimal base string
+        var solution = Integer.parseInt(firstNumber) * Integer.parseInt(secondNumber)
+        var solutionString = solution.toString()
+
+
+        return solutionString
     }
 
-    // switch statement for base2 that converts the number to decimal
-    // (for easier operations)
-    val secondNumber = when(base2) {
-    
-        1 -> converter.binToDec(num2)
-        2 -> num2
-        0 -> converter.hexadecimalToDecimal(num2)
-        else -> "ERROR"
-    }
+    fun division(num1: String, num2: String, base1: Int, base2: Int): String {
 
-    // uses the multiplication operation on the two numbers given and returns the number in a
-    // decimal base string
-    var solution = Integer.parseInt(firstNumber) * Integer.parseInt(secondNumber)
-    var solutionString = solution.toString()
+        // switch statement for base2 that converts the number to decimal
+        // (for easier operations)
+        val firstNumber = when(base1) {
 
-    
-    return solutionString
-}
+            1 -> converter.binToDec(num1)
+            2 -> num1
+            0 -> converter.hexadecimalToDecimal(num1)
+            else -> "ERROR"
+        }
+        // switch statement for base2 that converts the number to decimal
+        // (for easier operations)
+        val secondNumber = when(base2) {
 
-fun division(num1: String, num2: String, base1: Int, base2: Int): String {
+            1 -> converter.binToDec(num2)
+            2 -> num2
+            0 -> converter.hexadecimalToDecimal(num2)
+            else -> "ERROR"
+        }
+        // If statement included in-case that division does not equal a whole number : Produces a Remainder value
+        if (Integer.parseInt(firstNumber) % Integer.parseInt(secondNumber) > 0)
+        {
+            var remainder = Integer.parseInt(firstNumber) % Integer.parseInt(secondNumber)
 
-    // switch statement for base2 that converts the number to decimal
-    // (for easier operations)
-    val firstNumber = when(base1) {
-    
-        1 -> converter.binToDec(num1)
-        2 -> num1
-        0 -> converter.hexadecimalToDecimal(num1)
-        else -> "ERROR"
-    }
+            var numerator = Integer.parseInt(firstNumber) - remainder
 
-    // switch statement for base2 that converts the number to decimal
-    // (for easier operations)
-    val secondNumber = when(base2) {
-    
-        1 -> converter.binToDec(num2)
-        2 -> num2
-        0 -> converter.hexadecimalToDecimal(num2)
-        else -> "ERROR"
-    }
+            var solution = numerator / Integer.parseInt(secondNumber)
 
-    // uses the multiplication operation on the two numbers given and returns the number in a
-    // decimal base string
-    var solution = Integer.parseInt(firstNumber) / Integer.parseInt(secondNumber)
-    var solutionString = solution.toString()
+            var solutionString = solution.toString() + " R:" + remainder
 
-    
-    return solutionString
+            return solutionString
+        }
+        else // if no remainder found do regular division
+        {
+            // uses the multiplication operation on the two numbers given and returns the number in a
+            // decimal base string
+            var solution = Integer.parseInt(firstNumber) / Integer.parseInt(secondNumber)
+            var solutionString = solution.toString()
+
+
+            return solutionString
+        }
     }
 
 }

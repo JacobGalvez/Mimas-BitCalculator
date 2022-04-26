@@ -14,6 +14,7 @@ class Calculator_Code {
         val firstNumber = when(base1) {
             1 -> converter.binToDec(num1)
             2 -> num1
+            3 -> converter.octToDec(num1)
             0 -> converter.hexadecimalToDecimal(num1)
             else -> "ERROR"
         }
@@ -23,6 +24,7 @@ class Calculator_Code {
         val secondNumber = when(base2) {
             1 -> converter.binToDec(num2)
             2 -> num2
+            3 -> converter.octToDec(num2)
             0 -> converter.hexadecimalToDecimal(num2)
             else -> "ERROR"
         }
@@ -44,6 +46,7 @@ class Calculator_Code {
         val firstNumber = when(base1) {
             1 -> converter.binToDec(num1)
             2 -> num1
+            3 -> converter.octToDec(num1)
             0 -> converter.hexadecimalToDecimal(num1)
             else -> "ERROR"
         }
@@ -53,6 +56,7 @@ class Calculator_Code {
         val secondNumber = when(base2) {
             1 -> converter.binToDec(num2)
             2 -> num2
+            3 -> converter.octToDec(num2)
             0 -> converter.hexadecimalToDecimal(num2)
             else -> "ERROR"
         }
@@ -72,6 +76,7 @@ class Calculator_Code {
         val firstNumber = when(base1) {
             1 -> converter.binToDec(num1)
             2 -> num1
+            3 -> converter.octToDec(num1)
             0 -> converter.hexadecimalToDecimal(num1)
             else -> "ERROR"
         }
@@ -82,6 +87,7 @@ class Calculator_Code {
 
             1 -> converter.binToDec(num2)
             2 -> num2
+            3 -> converter.octToDec(num2)
             0 -> converter.hexadecimalToDecimal(num2)
             else -> "ERROR"
         }
@@ -103,6 +109,7 @@ class Calculator_Code {
 
             1 -> converter.binToDec(num1)
             2 -> num1
+            3 -> converter.octToDec(num1)
             0 -> converter.hexadecimalToDecimal(num1)
             else -> "ERROR"
         }
@@ -112,6 +119,7 @@ class Calculator_Code {
 
             1 -> converter.binToDec(num2)
             2 -> num2
+            3 -> converter.octToDec(num2)
             0 -> converter.hexadecimalToDecimal(num2)
             else -> "ERROR"
         }

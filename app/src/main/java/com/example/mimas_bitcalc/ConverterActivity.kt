@@ -50,7 +50,7 @@ class ConverterActivity : AppCompatActivity() {
                 if (insertText == "")
                     finalSolution = "0"
                 else {
-                    //answer.text = finalSolution
+                    //do nothing here
                 }
             }
         }
@@ -68,7 +68,7 @@ class ConverterActivity : AppCompatActivity() {
                 if (insertText == "")
                     finalSolution = "0"
                 else {
-                    //answer.text = finalSolution
+                    //do nothing here
                 }
             }
         }

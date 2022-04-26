@@ -32,7 +32,7 @@ class ConverterActivity : AppCompatActivity() {
         answer = findViewById<View>(R.id.solution) as TextView
         inputText = findViewById<View>(R.id.editText2) as EditText
 
-        val options = arrayOf("Hexadecimal", "Binary", "Decimal", "Octal")
+        val options = arrayOf("HEX", "BIN", "DEC", "OCT")
         input.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, options)
         conversionDesired.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, options)
 
@@ -74,7 +74,7 @@ class ConverterActivity : AppCompatActivity() {
         }
 
         @SuppressLint("SetTextI18n")
-        answer.text = "final solution"
+        answer.text = "......."
     }
 
     fun submit(view: View) {

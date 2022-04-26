@@ -34,6 +34,9 @@ class HistoryActivity : AppCompatActivity() {
 
         val log = (origNumber + convNumber + baseTypeChange)
 
+        if (baseTypeChange == "Incorrect Input")
+            return ""
+
         System.out.println(log)
 
         return log
@@ -62,6 +65,9 @@ class HistoryActivity : AppCompatActivity() {
         var log = (num1 + base1ToWords + operation + num2 + base2ToWords + " = " + solutionString + "(decimal)")
 
         println(log)
+
+        if (solutionString == "Incorrect Input")
+            return ""
 
         return log
     }

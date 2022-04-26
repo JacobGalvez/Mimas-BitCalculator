@@ -4,6 +4,7 @@ class Calculator_Code {
 
     private val converter = Conversion_Code()
 
+
     // ADD A WAY FOR OCTAL CONVERSIONS
 
 
@@ -28,6 +29,9 @@ class Calculator_Code {
             0 -> converter.hexadecimalToDecimal(num2)
             else -> "ERROR"
         }
+
+        if (firstNumber == "Incorrect Input" || secondNumber == "Incorrect Input")
+            return "Incorrect Input"
 
         // uses the addition operation on the two numbers given and returns the number in a
         // decimal base string
@@ -61,6 +65,8 @@ class Calculator_Code {
             else -> "ERROR"
         }
 
+        if (firstNumber == "Incorrect Input" || secondNumber == "Incorrect Input")
+            return "Incorrect Input"
         // uses the subtraction operation on the two numbers given and returns the number in a
         // decimal base string
         var solution = Integer.parseInt(firstNumber) - Integer.parseInt(secondNumber)
@@ -91,6 +97,9 @@ class Calculator_Code {
             0 -> converter.hexadecimalToDecimal(num2)
             else -> "ERROR"
         }
+
+        if (firstNumber == "Incorrect Input" || secondNumber == "Incorrect Input")
+            return "Incorrect Input"
 
         // uses the multiplication operation on the two numbers given and returns the number in a
         // decimal base string
@@ -123,6 +132,9 @@ class Calculator_Code {
             0 -> converter.hexadecimalToDecimal(num2)
             else -> "ERROR"
         }
+
+        if (firstNumber == "Incorrect Input" || secondNumber == "Incorrect Input")
+            return "Incorrect Input"
         // If statement included in-case that division does not equal a whole number : Produces a Remainder value
         if (Integer.parseInt(firstNumber) % Integer.parseInt(secondNumber) > 0)
         {

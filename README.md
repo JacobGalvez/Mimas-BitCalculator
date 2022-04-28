@@ -93,3 +93,13 @@ We have improved functions to perform binary, hexadecimal, and decimal conversio
 * Research done to implement design patterns / SOLID Principles (BIT-43)
 * URL for the research file: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/Research
 * Next Steps: Create History Page, Finalize Layout for all 4 pages (main, converter, calculator, History), Fix bugs handling input validation, Organize test code and make tests for all possible calculation and conversion possibilities, Clean out "debt" in all code
+## Sprint 3 ##
+### Jacob Galvez
+### Matthew Whieldon
+* BIT-61: Adding input validation for conversions that begin with Decimal - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-61-input-validation-for-decimal 
+* BIT-62: Adding input validation for conversions that begin with Hexadecimal - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-62-input-validation-for-Hex
+* BIT-64: Adding input validation for conversions that begin with Binary - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-64-input-validation-for-binary
+* BIT-69: Create Octal conversions with input validation - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-69-create-octal-functions
+* BIT-74: Cleaned up our conversion code - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-74-clean-up-convertor-code
+* Next Steps: Adding input validation for same base conversions, adding in the ability to convert negative inputs for all conversions, refactoring our current conversion code into multiple classes, add testing functions for the new octal functions we made in sprint 3.
+### Nicolas Canals

@@ -94,12 +94,15 @@ We have improved functions to perform binary, hexadecimal, and decimal conversio
 * URL for the research file: https://bitbucket.org/cs3398-s22-mimas/bitcalc/src/master/Research
 * Next Steps: Create History Page, Finalize Layout for all 4 pages (main, converter, calculator, History), Fix bugs handling input validation, Organize test code and make tests for all possible calculation and conversion possibilities, Clean out "debt" in all code
 ## Sprint 3 ##
+### Status of Project
+The app is truly 1 sprint away from being completely finished, and polished. The good thing is
+if we wanted to we could add more number bases quickly too.
 ### Jacob Galvez
-* BIT-67 Cleaned up the calculator code and added some comments for better understanding of the code.
-* BIT-65 moved History functions to its own class
-* BIT-59 Calculator is now more precise and will not crash when there is a remainder for division.
-* BIT-63 Group collaboration on the History Page.
-* BIT-58 User testing for bugs
+* BIT-67 Cleaned up the calculator code and added some comments for better understanding of the code. -https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/9b99b95de530dd3e080931ba399a68eacd667d70
+* BIT-65 moved History functions to its own class - https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/f1e10adb44058f374143040af5f0f71a143e0f14
+* BIT-59 Calculator is now more precise and will not crash when there is a remainder for division. - https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/7784b124979d9c32e606986be811a5b6ab62503f
+* BIT-63 Group collaboration on the History Page - https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/7e86a400b6315e7f62df54660f48dec7ef170d2c
+* BIT-58 User testing for bugs - https://bitbucket.org/cs3398-s22-mimas/bitcalc/commits/0c580fcde619136d7830c2428a1e1add531b34f5
 * Next Steps: There is a bug where if you input a very large number the app will crash, would
 * 	also like to have for functionality/history to the history backend.
 ### Matthew Whieldon

@@ -95,6 +95,13 @@ We have improved functions to perform binary, hexadecimal, and decimal conversio
 * Next Steps: Create History Page, Finalize Layout for all 4 pages (main, converter, calculator, History), Fix bugs handling input validation, Organize test code and make tests for all possible calculation and conversion possibilities, Clean out "debt" in all code
 ## Sprint 3 ##
 ### Jacob Galvez
+* BIT-67 Cleaned up the calculator code and added some comments for better understanding of the code.
+* BIT-65 moved History functions to its own class
+* BIT-59 Calculator is now more precise and will not crash when there is a remainder for division.
+* BIT-63 Group collaboration on the History Page.
+* BIT-58 User testing for bugs
+* Next Steps: There is a bug where if you input a very large number the app will crash, would
+* 	also like to have for functionality/history to the history backend.
 ### Matthew Whieldon
 * BIT-61: Adding input validation for conversions that begin with Decimal - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-61-input-validation-for-decimal 
 * BIT-62: Adding input validation for conversions that begin with Hexadecimal - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-62-input-validation-for-Hex

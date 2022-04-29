@@ -103,3 +103,9 @@ We have improved functions to perform binary, hexadecimal, and decimal conversio
 * BIT-74: Cleaned up our conversion code - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-74-clean-up-convertor-code
 * Next Steps: Adding input validation for same base conversions, adding in the ability to convert negative inputs for all conversions, refactoring our current conversion code into multiple classes, add testing functions for the new octal functions we made in sprint 3.
 ### Nicolas Canals
+* BIT-68: Fixing User Inputs adding constraints for size - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-68-fixing-user-inputs-adding-constra
+* BIT-70: Design and Develop History page - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-70-design-and-develop-history-page
+* BIT-71: Reorganize and complete all testing - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-71-reorganize-and-complete-all-testi
+* BIT-72: Finalize UI for all 4 pages of application - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-72-finalize-ui-for-all-4-pages-of-ap
+* BIT-73: Clean Out All Debt - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-73-clean-out-all-debt
+* Next Steps: 

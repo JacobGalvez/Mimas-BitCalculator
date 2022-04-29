@@ -118,4 +118,4 @@ if we wanted to we could add more number bases quickly too.
 * BIT-71: Reorganize and complete all testing - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-71-reorganize-and-complete-all-testi
 * BIT-72: Finalize UI for all 4 pages of application - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-72-finalize-ui-for-all-4-pages-of-ap
 * BIT-73: Clean Out All Debt - https://bitbucket.org/cs3398-s22-mimas/bitcalc/branch/feature/BIT-73-clean-out-all-debt
-* Next Steps: 
+* Next Steps: The Next thing I would like to get done would be having the History page for our application show a list of past conversions / calculations vs what we have done now is just showing just the most recent conversion / calculation. I would also like to have a group of users play with the app and give feedback on where the UI/UX could be improved.
